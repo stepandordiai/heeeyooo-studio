@@ -1,0 +1,78 @@
+.projects {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.wrapper1 {
+    height: 100vh;
+    background-image: url("./../assets/1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: center;
+}
+
+.wrapper2 {
+    height: 100vh;
+    background-image: url("./../assets/2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: center;
+}
+.wrapper3 {
+    height: 100vh;
+    background-image: url("./../assets/3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: center;
+}
+.wrapper4 {
+    height: 100vh;
+    background-image: url("./../assets/4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: center;
+}
+
+// Pagination
+
+.pagination {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.page1,
+.page2,
+.page3,
+.page4 {
+    height: 5px;
+    width: 20px;
+    background: #fff;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+.page--active {
+    width: 50px;
+    opacity: 1;
+}

@@ -1,5 +1,13 @@
 @use "./fonts";
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Fira Code", serif;
     color: #000;

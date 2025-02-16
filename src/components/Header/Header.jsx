@@ -1,6 +1,7 @@
 import "./Header.scss";
 import logoIcon from "./../../assets/logo/Frame 98.svg";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
     useEffect(() => {
@@ -20,7 +21,7 @@ const Header = () => {
                 <nav className="nav">
                     <p>Home</p>
                     <p>About</p>
-                    <p>Portfolio</p>
+                    <NavLink to="/projects">Projects</NavLink>
                     <p>Contact</p>
                 </nav>
             </div>
