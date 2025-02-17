@@ -71,6 +71,38 @@ const Projects = () => {
         });
     });
 
+    function scrollTo1Page() {
+        const projectsScroll = document.querySelector(".projects");
+        projectsScroll.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }
+
+    function scrollTo2Page() {
+        const projectsScroll = document.querySelector(".projects");
+        projectsScroll.scrollTo({
+            top: window.innerHeight,
+            behavior: "smooth",
+        });
+    }
+
+    function scrollTo3Page() {
+        const projectsScroll = document.querySelector(".projects");
+        projectsScroll.scrollTo({
+            top: window.innerHeight * 2,
+            behavior: "smooth",
+        });
+    }
+
+    function scrollTo4Page() {
+        const projectsScroll = document.querySelector(".projects");
+        projectsScroll.scrollTo({
+            top: window.innerHeight * 3,
+            behavior: "smooth",
+        });
+    }
+
     return (
         <>
             <section className="projects">
@@ -88,10 +120,18 @@ const Projects = () => {
                 </div>
             </section>
             <div className="pagination">
-                <div className="page1 page--active"></div>
-                <div className="page2"></div>
-                <div className="page3"></div>
-                <div className="page4"></div>
+                <div onClick={scrollTo1Page} className="page1 page--active">
+                    <span>01</span>
+                </div>
+                <div onClick={scrollTo2Page} className="page2">
+                    <span>02</span>
+                </div>
+                <div onClick={scrollTo3Page} className="page3">
+                    <span>03</span>
+                </div>
+                <div onClick={scrollTo4Page} className="page4">
+                    <span>04</span>
+                </div>
             </div>
         </>
     );

@@ -16,11 +16,13 @@ const Header = () => {
         });
     }, []);
     return (
-        <header className="header">
-            <div>
-                <img width={100} src={logoIcon} alt="" />
-                <div>.studio</div>
-            </div>
+        <>
+            <header className="header">
+                <div>
+                    <img width={100} src={logoIcon} alt="" />
+                    <div>heeeyooo.studio</div>
+                </div>
+            </header>
             <div className="menu">
                 <div className="menu-txt">menu</div>
                 <nav className="nav">
@@ -32,7 +34,7 @@ const Header = () => {
                     <p>Contact</p>
                 </nav>
             </div>
-        </header>
+        </>
     );
 };
 

@@ -1,11 +1,14 @@
 .header {
+    position: fixed;
+    z-index: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     div {
         display: flex;
         justify-content: center;
         align-items: center;
+        color: rgb(0, 0, 0);
     }
 }
 
@@ -13,16 +16,25 @@
     position: fixed;
     top: 30px;
     right: 30px;
+    display: grid;
+    place-items: center;
     background: black;
     color: white;
     height: 50px;
     width: 100px;
     border-radius: 10px;
     transition: all 0.5s;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
 }
 
 .menu--active {
-    top: 0 !important;
+    top: 0;
     right: 0;
     height: 100%;
     width: 100%;
