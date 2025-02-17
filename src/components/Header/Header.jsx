@@ -9,6 +9,11 @@ const Header = () => {
             document.querySelector(".menu").classList.toggle("menu--active");
             document.querySelector(".nav").classList.toggle("nav--active");
         });
+
+        document.querySelector(".js-link").addEventListener("click", () => {
+            document.querySelector(".menu").classList.remove("menu--active");
+            document.querySelector(".nav").classList.remove("nav--active");
+        });
     }, []);
     return (
         <header className="header">
@@ -21,7 +26,9 @@ const Header = () => {
                 <nav className="nav">
                     <p>Home</p>
                     <p>About</p>
-                    <NavLink to="/projects">Projects</NavLink>
+                    <NavLink className={"js-link"} to="/projects">
+                        Projects
+                    </NavLink>
                     <p>Contact</p>
                 </nav>
             </div>

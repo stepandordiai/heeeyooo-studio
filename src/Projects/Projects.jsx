@@ -1,4 +1,9 @@
 import { useEffect } from "react";
+import img1 from "./../assets/1.jpg";
+import img2 from "./../assets/2.jpg";
+import img3 from "./../assets/3.jpg";
+import img4 from "./../assets/4.jpg";
+
 import "./Projects.scss";
 
 const Projects = () => {
@@ -69,10 +74,18 @@ const Projects = () => {
     return (
         <>
             <section className="projects">
-                <div className="wrapper1"></div>
-                <div className="wrapper2"></div>
-                <div className="wrapper3"></div>
-                <div className="wrapper4"></div>
+                <div className="wrapper1">
+                    <img src={img1} alt="" />
+                </div>
+                <div className="wrapper2">
+                    <img src={img2} alt="" />
+                </div>
+                <div className="wrapper3">
+                    <img src={img3} alt="" />
+                </div>
+                <div className="wrapper4">
+                    <img src={img4} alt="" />
+                </div>
             </section>
             <div className="pagination">
                 <div className="page1 page--active"></div>
