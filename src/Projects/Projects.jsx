@@ -68,54 +68,100 @@ const Projects = () => {
                     .classList.remove("page--active");
                 document.querySelector(".page4").classList.add("page--active");
             }
+
+            document.querySelectorAll(".wrapper").forEach((el) => {
+                el.classList.add("wrapper--active");
+            });
         });
-    });
+
+        projectsScroll.addEventListener("scrollend", () => {
+            document.querySelectorAll(".wrapper").forEach((el) => {
+                el.classList.remove("wrapper--active");
+            });
+        });
+    }, []);
 
     function scrollTo1Page() {
         const projectsScroll = document.querySelector(".projects");
-        projectsScroll.scrollTo({
-            top: 0,
-            behavior: "smooth",
+
+        document.querySelectorAll(".wrapper").forEach((el) => {
+            el.classList.add("wrapper--active");
         });
+        setTimeout(() => {
+            projectsScroll.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }, 600);
     }
 
     function scrollTo2Page() {
         const projectsScroll = document.querySelector(".projects");
-        projectsScroll.scrollTo({
-            top: window.innerHeight,
-            behavior: "smooth",
+
+        document.querySelectorAll(".wrapper").forEach((el) => {
+            el.classList.add("wrapper--active");
         });
+        setTimeout(() => {
+            projectsScroll.scrollTo({
+                top: window.innerHeight,
+                behavior: "smooth",
+            });
+        }, 600);
     }
 
     function scrollTo3Page() {
         const projectsScroll = document.querySelector(".projects");
-        projectsScroll.scrollTo({
-            top: window.innerHeight * 2,
-            behavior: "smooth",
+
+        document.querySelectorAll(".wrapper").forEach((el) => {
+            el.classList.add("wrapper--active");
         });
+        setTimeout(() => {
+            projectsScroll.scrollTo({
+                top: window.innerHeight * 2,
+                behavior: "smooth",
+            });
+        }, 600);
     }
 
     function scrollTo4Page() {
         const projectsScroll = document.querySelector(".projects");
-        projectsScroll.scrollTo({
-            top: window.innerHeight * 3,
-            behavior: "smooth",
+
+        document.querySelectorAll(".wrapper").forEach((el) => {
+            el.classList.add("wrapper--active");
         });
+        setTimeout(() => {
+            projectsScroll.scrollTo({
+                top: window.innerHeight * 3,
+                behavior: "smooth",
+            });
+        }, 600);
     }
 
     return (
         <>
             <section className="projects">
-                <div className="wrapper1">
+                <div className="wrapper wrapper1">
                     <img src={img1} alt="" />
+                    <p>Pepa Bourek</p>
+                    <a href="https://pepabourek.cz/" target="_blank">
+                        pepabourek.cz
+                    </a>
                 </div>
-                <div className="wrapper2">
+                <div className="wrapper wrapper2">
+                    <p>Prozubik</p>
                     <img src={img2} alt="" />
+                    <a href="https://prozubik.cz/" target="_blank">
+                        prozubik.cz
+                    </a>
                 </div>
-                <div className="wrapper3">
+                <div className="wrapper wrapper3">
+                    <p>Neresen</p>
                     <img src={img3} alt="" />
+                    <a href="https://neresen-cz.netlify.app/" target="_blank">
+                        neresen.cz
+                    </a>
                 </div>
-                <div className="wrapper4">
+                <div className="wrapper wrapper4">
                     <img src={img4} alt="" />
                 </div>
             </section>
