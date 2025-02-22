@@ -1,5 +1,5 @@
 import "./Header.scss";
-import logoIcon from "./../../assets/logo/heeeyooo-logo-white.svg";
+import logo from "./../../assets/logo/heeeyooo-studio-logo-white-v1.svg";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -25,10 +25,10 @@ const Header = () => {
     return (
         <>
             <header className="header">
-                {/* <div> */}
-                <img width={100} src={logoIcon} alt="" />
-                {/* <span>heeeyooo.studio</span> */}
-                {/* </div> */}
+                <div className="header__logo">
+                    <img src={logo} alt="" />
+                    <span>heeeyooo.studio</span>
+                </div>
                 <div className="menu">
                     <div className="menu-txt">menu</div>
                     <nav className="nav">

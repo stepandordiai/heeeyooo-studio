@@ -74,7 +74,74 @@ const Projects = () => {
             });
         });
 
+        projectsScroll.addEventListener("touchmove", () => {
+            if (projectsScroll.scrollTop < halfDisplay) {
+                document.querySelector(".page1").classList.add("page--active");
+                document
+                    .querySelector(".page2")
+                    .classList.remove("page--active");
+                document
+                    .querySelector(".page3")
+                    .classList.remove("page--active");
+                document
+                    .querySelector(".page4")
+                    .classList.remove("page--active");
+            } else if (
+                projectsScroll.scrollTop > halfDisplay &&
+                projectsScroll.scrollTop < display + halfDisplay
+            ) {
+                document
+                    .querySelector(".page1")
+                    .classList.remove("page--active");
+                document.querySelector(".page2").classList.add("page--active");
+                document
+                    .querySelector(".page3")
+                    .classList.remove("page--active");
+                document
+                    .querySelector(".page4")
+                    .classList.remove("page--active");
+            } else if (
+                projectsScroll.scrollTop > display + halfDisplay &&
+                projectsScroll.scrollTop < display * 2 + halfDisplay
+            ) {
+                document
+                    .querySelector(".page1")
+                    .classList.remove("page--active");
+                document
+                    .querySelector(".page2")
+                    .classList.remove("page--active");
+                document.querySelector(".page3").classList.add("page--active");
+                document
+                    .querySelector(".page4")
+                    .classList.remove("page--active");
+            } else if (
+                projectsScroll.scrollTop > display * 2 + halfDisplay &&
+                projectsScroll.scrollTop < display * 3 + halfDisplay
+            ) {
+                document
+                    .querySelector(".page1")
+                    .classList.remove("page--active");
+                document
+                    .querySelector(".page2")
+                    .classList.remove("page--active");
+                document
+                    .querySelector(".page3")
+                    .classList.remove("page--active");
+                document.querySelector(".page4").classList.add("page--active");
+            }
+
+            document.querySelectorAll(".wrapper").forEach((el) => {
+                el.classList.add("wrapper--active");
+            });
+        });
+
         projectsScroll.addEventListener("scrollend", () => {
+            document.querySelectorAll(".wrapper").forEach((el) => {
+                el.classList.remove("wrapper--active");
+            });
+        });
+
+        projectsScroll.addEventListener("touchend", () => {
             document.querySelectorAll(".wrapper").forEach((el) => {
                 el.classList.remove("wrapper--active");
             });

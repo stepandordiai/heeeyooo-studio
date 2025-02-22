@@ -1,5 +1,5 @@
-@use "./fonts" as *;
-@use "./reset" as *;
+@use "./fonts";
+@use "./reset";
 
 ::-webkit-scrollbar {
     display: none;
