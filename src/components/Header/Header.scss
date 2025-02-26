@@ -5,10 +5,8 @@
     top: 25px;
     left: 25px;
     height: 50px;
-    padding-left: 5px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    padding-left: 25px;
+    @include flex-center;
     z-index: 100px;
 }
 
@@ -19,7 +17,7 @@
     color: #fff;
 
     img {
-        height: 40px;
+        height: 35px;
     }
 }
 
@@ -29,10 +27,9 @@
     right: 25px;
     left: 25px;
     z-index: 99;
-    display: grid;
-    place-items: center;
-    background: black;
-    color: white;
+    @include grid-center;
+    background: #000;
+    color: #fff;
     height: 50px;
     border-radius: 10px;
     transition: all 0.5s;
@@ -51,13 +48,10 @@
     top: 25px;
     right: 25px;
     height: 50px;
-    width: 100px;
-    border-radius: inherit;
+    padding: 0 25px;
+    @include grid-center;
+    color: #fff;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
 }
 
 .nav {
@@ -74,5 +68,4 @@
 
 .text-line-wrapper {
     overflow: hidden;
-    // display: inline-block;
 }
