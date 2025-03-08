@@ -10,7 +10,50 @@ const Home = () => {
             const letters = "abcdefghijklmnopqrstuvwxyz";
             const value = el.textContent;
             let interval = null;
+
+            addEventListener("resize", () => {
+                // el.style.width = `${width}px`;
+                // el.style.textAlign = `center`;
+                // console.log("h");
+                el.style.width = `initial`;
+                el.innerText = value;
+            });
+
             el.addEventListener("mouseover", () => {
+                el.style.width = `${width}px`;
+
+                let iteration = 0;
+                clearInterval(interval);
+
+                interval = setInterval(() => {
+                    el.innerText = el.innerText
+                        .split("")
+                        .map((letter, index) => {
+                            // When iteration 0.2 we will return value with index 0, when iteration 1.2 we will return value with index 1
+                            // first letter 1 iteration, second letter 6 iterations, third letter 11 iterations
+                            if (index < iteration) {
+                                return value[index];
+                            }
+
+                            return letters[Math.floor(Math.random() * 26)];
+                        })
+                        .join("");
+
+                    // max index is 14 so when 14.2 full text reveals but interval still active until iteration will be 15
+                    // length 15
+                    if (iteration >= value.length) {
+                        clearInterval(interval);
+                    }
+
+                    // we add 0.2 each interval
+                    if (value.length > 10) {
+                        iteration += 1 / 4;
+                    }
+                    iteration += 1 / 5;
+                    // interval repeats every 30 ms so letters change every 30 ms
+                }, 30);
+            });
+            el.addEventListener("touchstart", () => {
                 el.style.width = `${width}px`;
 
                 let iteration = 0;
