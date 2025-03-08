@@ -15,12 +15,12 @@ const Home = () => {
                 // el.style.width = `${width}px`;
                 // el.style.textAlign = `center`;
                 // console.log("h");
-                el.style.width = `initial`;
-                el.innerText = value;
+                // el.style.width = `initial`;
+                // el.innerText = value;
             });
 
             el.addEventListener("mouseover", () => {
-                el.style.width = `${width}px`;
+                // el.style.width = `${width}px`;
 
                 let iteration = 0;
                 clearInterval(interval);
@@ -49,12 +49,12 @@ const Home = () => {
                     if (value.length > 10) {
                         iteration += 1 / 4;
                     }
-                    iteration += 1 / 5;
+                    iteration += 1 / 2.5;
                     // interval repeats every 30 ms so letters change every 30 ms
                 }, 30);
             });
             el.addEventListener("touchstart", () => {
-                el.style.width = `${width}px`;
+                // el.style.width = `${width}px`;
 
                 let iteration = 0;
                 clearInterval(interval);
@@ -81,14 +81,14 @@ const Home = () => {
 
                     // we add 0.2 each interval
                     if (value.length > 10) {
-                        iteration += 1 / 4;
+                        iteration += 1 / 2.5;
                     }
                     iteration += 1 / 5;
                     // interval repeats every 30 ms so letters change every 30 ms
                 }, 30);
             });
 
-            el.style.width = `${width}px`;
+            // el.style.width = `${width}px`;
 
             let iteration = 0;
             clearInterval(interval);
@@ -115,7 +115,7 @@ const Home = () => {
 
                 // we add 0.2 each interval
                 if (value.length > 10) {
-                    iteration += 1 / 4;
+                    iteration += 1 / 2.5;
                 }
                 iteration += 1 / 5;
                 // interval repeats every 30 ms so letters change every 30 ms
