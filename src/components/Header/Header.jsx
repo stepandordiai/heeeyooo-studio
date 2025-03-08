@@ -17,12 +17,10 @@ const Header = () => {
         <header className="header">
             <div className="header__logo">
                 <img src={logo} alt="Logo" />
-                <span>heeeyooo.studio</span>
+                <span className="js-scrambled-txt">heeeyooo.studio</span>
             </div>
             <div className="menu">
-                <div onClick={toggleMenu} className="menu-txt">
-                    menu
-                </div>
+                <div className="menu-txt js-scrambled-txt">Menu</div>
                 <nav className="nav">
                     <NavLink onClick={hideMenu} className={"js-link"} to={"/"}>
                         Home

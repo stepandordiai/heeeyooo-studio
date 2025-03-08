@@ -1,8 +1,48 @@
+* {
+    white-space: nowrap;
+}
+
 .home {
     height: 100svh;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    font-size: 3rem;
-    padding: 25px 25px 100px;
+    align-items: center;
+    flex-direction: column;
+    // font-size: 3rem;
+    // padding: 25px 25px 100px;
+}
+
+.home__title {
+    font-size: clamp(1rem, 4vw, 2rem);
+}
+
+.socials-container {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.socials__title,
+.related__title {
+    opacity: 0.5;
+    margin-bottom: 10px;
+}
+
+.related-container {
+    position: fixed;
+    bottom: 25px;
+    left: 150px;
+    text-align: left;
+}
+
+a {
+    color: #000;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }

@@ -48,10 +48,10 @@
     top: 25px;
     right: 25px;
     height: 50px;
+    z-index: 101;
     padding: 0 25px;
     @include grid-center;
     color: #fff;
-    cursor: pointer;
 }
 
 .nav {
