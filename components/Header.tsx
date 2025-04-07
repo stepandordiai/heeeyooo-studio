@@ -46,13 +46,13 @@ const Header = () => {
                         Home
                     </Link>
                     <p>About</p>
-                    <Link
+                    {/* <Link
                         onClick={hideMenu}
                         className={"js-link"}
                         href="/projects"
                     >
                         Projects
-                    </Link>
+                    </Link> */}
                     <p>Contact</p>
                 </nav>
             </div>
