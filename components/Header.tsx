@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-// import logo from "./../public/logo/heeeyooo-studio-logo-white-v1.svg";
 import logo from "./../public/logo/heeeyooo-studio-logo-white-v1.svg";
 import styles from "./../styles/Header.module.scss";
 import { useRef } from "react";
@@ -46,13 +45,6 @@ const Header = () => {
                         Home
                     </Link>
                     <p>About</p>
-                    {/* <Link
-                        onClick={hideMenu}
-                        className={"js-link"}
-                        href="/projects"
-                    >
-                        Projects
-                    </Link> */}
                     <p>Contact</p>
                 </nav>
             </div>
