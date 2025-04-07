@@ -1,0 +1,82 @@
+// @use "./" as *;
+
+.header {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    height: 50px;
+    padding-left: 25px;
+    // @include flex-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100px;
+}
+
+.header__logo {
+    // @include flex-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    z-index: 100;
+    color: #fff;
+
+}
+
+.logo__img {
+    height: 35px !important;
+}
+
+.menu {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    left: 25px;
+    z-index: 99;
+    // @include grid-center;
+    display: grid;
+    place-content: center;
+    background: #000;
+    color: #fff;
+    height: 50px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.menu__active {
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    // border-radius: 0;
+}
+
+.menu__txt {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    height: 50px;
+    z-index: 101;
+    padding: 0 25px;
+    // @include grid-center;
+    display: grid;
+    place-content: center;
+    color: #fff;
+}
+
+.nav {
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 2rem;
+}
+
+.nav__active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.text-line-wrapper {
+    overflow: hidden;
+}

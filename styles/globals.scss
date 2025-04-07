@@ -1,0 +1,35 @@
+@use './fonts';
+@use './reset';
+
+* {
+    white-space: nowrap;
+}
+
+a {
+    color: #000;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+// 
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    // font-family: "Fira Code", serif;
+    font-family: "Chakra Petch", serif;
+    color: #000;
+    background: #fff;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+}
