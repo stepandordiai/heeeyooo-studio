@@ -1,59 +1,59 @@
 import { FC } from "react";
 import Layout from "../components/Layout";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import styles from "./../styles/Home.module.scss";
 
 const HomePage: FC = () => {
-    useEffect(() => {
-        const scrambledTxt = document.querySelectorAll(".js-scrambled-txt");
+    // useEffect(() => {
+    //     const scrambledTxt = document.querySelectorAll(".js-scrambled-txt");
 
-        scrambledTxt.forEach((el) => {
-            const pElement = el as HTMLParagraphElement;
+    //     scrambledTxt.forEach((el) => {
+    //         const pElement = el as HTMLParagraphElement;
 
-            const letters: string = "abcdefghijklmnopqrstuvwxyz";
-            const value = pElement.textContent;
-            let interval: any = null;
+    //         const letters: string = "abcdefghijklmnopqrstuvwxyz";
+    //         const value = pElement.textContent;
+    //         let interval: any = null;
 
-            function animateChars() {
-                let iteration = 0;
-                clearInterval(interval);
+    //         function animateChars() {
+    //             let iteration = 0;
+    //             clearInterval(interval);
 
-                interval = setInterval(() => {
-                    pElement.innerText = pElement.innerText
-                        .split("")
-                        .map((letter: string, index: number) => {
-                            // When iteration 0.2 we will return value with index 0, when iteration 1.2 we will return value with index 1
-                            // first letter 1 iteration, second letter 6 iterations, third letter 11 iterations
-                            if (index < iteration) {
-                                return value![index];
-                            }
+    //             interval = setInterval(() => {
+    //                 pElement.innerText = pElement.innerText
+    //                     .split("")
+    //                     .map((letter: string, index: number) => {
+    //                         // When iteration 0.2 we will return value with index 0, when iteration 1.2 we will return value with index 1
+    //                         // first letter 1 iteration, second letter 6 iterations, third letter 11 iterations
+    //                         if (index < iteration) {
+    //                             return value![index];
+    //                         }
 
-                            return letters[Math.floor(Math.random() * 26)];
-                        })
-                        .join("");
+    //                         return letters[Math.floor(Math.random() * 26)];
+    //                     })
+    //                     .join("");
 
-                    if (iteration >= value!.length) {
-                        clearInterval(interval);
-                    }
+    //                 if (iteration >= value!.length) {
+    //                     clearInterval(interval);
+    //                 }
 
-                    if (value!.length > 10) {
-                        iteration += 1 / 4;
-                    }
-                    iteration += 1 / 2.5;
-                }, 30);
-            }
+    //                 if (value!.length > 10) {
+    //                     iteration += 1 / 4;
+    //                 }
+    //                 iteration += 1 / 2.5;
+    //             }, 30);
+    //         }
 
-            el.addEventListener("mouseover", () => {
-                // el.style.width = `${width}px`;
-                animateChars();
-            });
-            el.addEventListener("touchstart", () => {
-                animateChars();
-            });
+    //         el.addEventListener("mouseover", () => {
+    //             // el.style.width = `${width}px`;
+    //             animateChars();
+    //         });
+    //         el.addEventListener("touchstart", () => {
+    //             animateChars();
+    //         });
 
-            animateChars();
-        });
-    }, []);
+    //         animateChars();
+    //     });
+    // }, []);
     return (
         <Layout>
             <section className={styles.home}>
