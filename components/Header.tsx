@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import logoImg from "./../public/logo/heeeyooo-studio-logo-white-v1.svg";
 import styles from "./../styles/Header.module.scss";
 
 const Header = () => {
@@ -9,9 +8,8 @@ const Header = () => {
 			<div className={styles["header-top"]}>
 				<Link href={"/"} className={styles["header__logo-link"]}>
 					<Image
-						className={styles["header__logo-img"]}
-						src={logoImg}
-						layout="responsive"
+						src="/logo/heeeyooo-studio-logo-white-v1.svg"
+						width={30}
 						height={30}
 						alt=""
 					/>
