@@ -1,100 +1,51 @@
-// @use "./" as *;
-
 .header {
 	position: fixed;
-	top: 25px;
-	left: 25px;
-	height: 50px;
-	padding-left: 25px;
-	// @include flex-center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	top: 30px;
+	left: 30px;
+	right: 30px;
+	min-height: 50px;
+	padding: 0 10px;
+	background: #000;
+	border-radius: 15px;
 	z-index: 100px;
+	color: #fff;
 }
 
-.header__logo {
-	// @include flex-center;
+.header-top {
+	min-height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo-link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	column-gap: 5px;
-	z-index: 100;
 	color: #fff;
 }
 
-.logo__img {
-	height: 35px !important;
+.header__logo-img {
+	height: 30px !important;
 }
 
-.menu {
-	position: fixed;
-	top: 25px;
-	right: 25px;
-	left: 25px;
-	z-index: 99;
-	// @include grid-center;
-	display: grid;
-	place-content: center;
-	background: #000;
-	color: #fff;
-	height: 50px;
-	border-radius: 10px;
-	transition: all 0.5s;
-}
-
-.menu__active {
-	height: calc(100% - 50px);
-}
-
-.menu__txt {
-	position: fixed;
-	top: 25px;
-	right: 25px;
-	height: 50px;
-	z-index: 101;
-	padding: 0 25px;
-	display: grid;
-	place-content: center;
-	color: #fff;
-	cursor: pointer;
-	-webkit-user-select: none;
-	user-select: none;
-}
-
-.nav {
-	text-align: center;
+.menu-btn {
 	display: flex;
-	flex-direction: column;
-	// opacity: 0;
-	// pointer-events: none;
-	font-size: 2rem;
+	justify-content: center;
+	align-items: center;
+	column-gap: 5px;
+	background: #fff;
+	color: #000;
+	height: 30px;
+	border-radius: 7.5px;
+	padding: 0 7.5px;
 }
 
-.nav__active {
-	// opacity: 1;
-	// pointer-events: all;
-}
-
-.text-line-wrapper {
-	overflow: hidden;
-}
-
-.word-line__container {
-	overflow: hidden;
-}
-
-.word-line {
-	transform: translateY(100%);
-	overflow: hidden;
-	transition: 0s;
-}
-
-.word-line--active {
-	transform: translateY(0);
-	transition: 0.5s 0.25s;
-}
-
-.js-link {
-	color: #fff !important;
+@media screen and (width <= 896px) {
+	.header {
+		top: 15px;
+		left: 15px;
+		right: 15px;
+	}
 }
