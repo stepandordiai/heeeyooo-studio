@@ -4,8 +4,7 @@
 	left: 30px;
 	right: 30px;
 	min-height: 50px;
-	padding: 0 10px;
-	background: #000;
+	padding-right: 15px;
 	border-radius: 15px;
 	z-index: 100px;
 	color: #fff;
@@ -22,8 +21,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	column-gap: 5px;
-	color: #fff;
+	color: #000;
+	border-radius: 15px;
+	font-size: 1.5rem;
+	font-weight: 500;
+
+	span {
+		font-weight: 100;
+	}
 }
 
 .menu-btn {
@@ -31,17 +36,102 @@
 	justify-content: center;
 	align-items: center;
 	column-gap: 5px;
-	background: #fff;
+	background: rgba(0, 0, 0, 0.1);
 	color: #000;
-	height: 30px;
-	border-radius: 7.5px;
+	height: 40px;
+	border-radius: 15px;
 	padding: 0 7.5px;
 }
 
-@media screen and (width <= 896px) {
+.menu {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	width: 25%;
+	transform: translateX(100%);
+	background-color: rgb(243, 255, 208);
+	transition: all 0.5s;
+}
+
+.el1 {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -3;
+	width: 25%;
+	transform: translateX(100%);
+	background-color: rgb(246, 155, 155);
+	transition: all 0.5s 0.3s;
+}
+
+.el2 {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -2;
+	width: 25%;
+	transform: translateX(100%);
+	background-color: rgb(170, 255, 167);
+	transition: all 0.5s 0.15s;
+}
+
+.menu--active {
+	transform: translateX(0);
+	transition: all 0.5s 0.3s;
+}
+.el1--active {
+	transform: translateX(0);
+	transition: all 0.5s;
+}
+.el2--active {
+	transform: translateX(0);
+	transition: all 0.5s 0.15s;
+}
+
+.menu__nav {
+	overflow: hidden;
+	padding: 130px 15px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+}
+
+.nav-link {
+	color: #000;
+	font-size: 1.5rem;
+	background: rgba(121, 245, 234, 0.5);
+	padding: 5px;
+	border-radius: 7.5px;
+}
+
+@media screen and (width < 896px) {
 	.header {
-		top: 15px;
-		left: 15px;
-		right: 15px;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+	}
+
+	.menu__nav {
+		overflow: hidden;
+		padding: 70px 15px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 5px;
+	}
+
+	.menu {
+		width: 100%;
+	}
+
+	.el1 {
+		width: 100%;
+	}
+
+	.el2 {
+		width: 100%;
 	}
 }
