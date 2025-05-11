@@ -1,20 +1,13 @@
+@use "./mixins" as *;
+
 .header {
 	position: fixed;
-	top: 30px;
-	left: 30px;
-	right: 30px;
-	min-height: 50px;
-	padding-right: 15px;
-	border-radius: 15px;
+	top: 0;
+	left: 0;
+	right: 0;
 	z-index: 100px;
-	color: #fff;
-}
-
-.header-top {
-	min-height: 50px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	@include flex-between-center;
+	padding: 20px;
 }
 
 .header__logo-link {
@@ -39,6 +32,7 @@
 	background: rgba(0, 0, 0, 0.1);
 	color: #000;
 	height: 40px;
+	font-weight: 500;
 	border-radius: 15px;
 	padding: 0 7.5px;
 }
@@ -110,9 +104,7 @@
 
 @media screen and (width < 896px) {
 	.header {
-		top: 0px;
-		left: 0px;
-		right: 0px;
+		padding: 10px;
 	}
 
 	.menu__nav {

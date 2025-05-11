@@ -26,13 +26,13 @@ const Header = () => {
 	}, [handleMenuToggle]);
 
 	return (
-		<header className={styles.header}>
-			<div className={styles["header-top"]}>
+		<>
+			<header className={styles.header}>
 				<Link href={"/"} className={styles["header__logo-link"]}>
 					<Image
 						src="/logo/heeeyooo-studio-logo-black-v1.svg"
-						width={50}
-						height={50}
+						width={40}
+						height={40}
 						alt=""
 					/>
 					<p>
@@ -42,7 +42,7 @@ const Header = () => {
 				<button ref={menuBtn} className={styles["menu-btn"]}>
 					<span style={{ pointerEvents: "none" }}>menu</span>
 				</button>
-			</div>
+			</header>
 			<div ref={menu} className={styles["menu"]}>
 				<nav className={styles["menu__nav"]}>
 					<Link className={styles["nav-link"]} href={"/"}>
@@ -61,7 +61,7 @@ const Header = () => {
 			</div>
 			<div ref={el1} className={styles["el1"]}></div>
 			<div ref={el2} className={styles["el2"]}></div>
-		</header>
+		</>
 	);
 };
 
