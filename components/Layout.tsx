@@ -1,8 +1,8 @@
-import { FC, ReactNode } from "react";
-import Header from "./Header";
+import { FC, ReactNode } from "react"
+import Header from "./Header"
 
 interface LayoutProps {
-	children: ReactNode;
+	children: ReactNode
 }
 
 const Layout: FC<LayoutProps> = ({ children }) => {
@@ -14,7 +14,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 				<p>&copy; 2025 My Landing Page</p>
 			</footer>
 
-			<style jsx>{`
+			{/* <style jsx>{`
 				header {
 					background-color: #333;
 					color: white;
@@ -44,9 +44,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 					background-color: #333;
 					color: white;
 				}
-			`}</style>
+			`}</style> */}
 		</div>
-	);
-};
+	)
+}
 
-export default Layout;
+export default Layout

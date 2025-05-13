@@ -16,9 +16,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 					sizes="180x180"
 					href="/favicons/heeeyooo-studio-v2.png"
 				/>
-				<title>heeeyooo.studio</title>
+				<title>heeeyooo studio</title>
 			</Head>
-			<Component {...pageProps} />;
+			<Component {...pageProps} />
 		</>
 	);
 };
