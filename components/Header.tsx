@@ -36,14 +36,14 @@ const Header = () => {
 						alt=""
 					/>
 					<p>
-						heeeyooo.<span>studio</span>
+						heeeyooo <span>studio</span>
 					</p>
 				</Link>
-				<button ref={menuBtn} className={styles["menu-btn"]}>
+				{/* <button ref={menuBtn} className={styles["menu-btn"]}>
 					<span style={{ pointerEvents: "none" }}>menu</span>
-				</button>
+				</button> */}
 			</header>
-			<div ref={menu} className={styles["menu"]}>
+			{/* <div ref={menu} className={styles["menu"]}>
 				<nav className={styles["menu__nav"]}>
 					<Link className={styles["nav-link"]} href={"/"}>
 						Home
@@ -60,7 +60,7 @@ const Header = () => {
 				</nav>
 			</div>
 			<div ref={el1} className={styles["el1"]}></div>
-			<div ref={el2} className={styles["el2"]}></div>
+			<div ref={el2} className={styles["el2"]}></div> */}
 		</>
 	);
 };

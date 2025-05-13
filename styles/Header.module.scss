@@ -11,16 +11,12 @@
 }
 
 .header__logo-link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #000;
-	border-radius: 15px;
+	@include flex-center;
 	font-size: 1.5rem;
 	font-weight: 500;
 
 	span {
-		font-weight: 100;
+		font-weight: 300;
 	}
 }
 
